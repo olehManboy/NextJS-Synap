@@ -1,0 +1,27 @@
+@import  '../utils';
+
+
+.synap-main-header {
+  height: 70px;
+  top: 0;
+  left: 0;
+  background-color: $primary-background-color;
+  @include flex(row, center, center);
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+
+  .form-links{
+    @include flex(row, center, center);
+    column-gap: 12px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .nav-links{
+     @include flex(row, center, center);
+     column-gap: 5px;
+     margin-right: 3%;
+     margin-left: 5%;
+  }
+}

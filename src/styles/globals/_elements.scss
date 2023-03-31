@@ -1,0 +1,80 @@
+@import "../utils/";
+
+.synap-default-button {
+  height: 36px;
+  border-radius: 19px;
+  padding: 8px 16px 8px 16px;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  @include flex(row, center, center);
+
+  svg {
+    padding-right: 6px;
+    height: 17px;
+    width: 17px;
+  }
+
+   .default-icon {
+    padding-right: 6px;
+    height: 17px;
+    width: 17px;
+  }
+
+
+  &.login-button {
+    background-color: $primary-background-color;
+    color: $primary-theme-color;
+    border: 1px solid $primary-theme-color;
+    padding: 8px 18px 8px 18px;
+  }
+
+  &.donate-button {
+    background-color: $primary-theme-color;
+  }
+
+  &.signup-button {
+    background-color: $primary-theme-color;
+  }
+
+  &.primary-nav-button{
+    background-color: transparent;
+    color: $outline-color-1;
+
+    &:hover {
+      background-color: $default-hover-color;
+    }
+  }
+}
+
+.default-link {
+  text-decoration: none;
+}
+
+.input-container {
+  height: 36px;
+  border: 1px solid $outline-color-1;
+  border-radius: 19px;
+  @include flex(row, center, center);
+  padding-left: 12px;
+  padding-right: 12px;
+  min-width: 250px;
+  flex-grow: 1;
+  max-width: 250px;
+  
+  .default-input {
+    outline: none;
+    border: none;
+    flex-grow: 1;
+  }
+
+  .icon-search {
+    height: 17px;
+    width: 17px;
+    color: $outline-color-1;
+  }
+  
+  
+}

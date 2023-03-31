@@ -1,0 +1,254 @@
+@import "../utils";
+
+.main-form {
+  @include flex(row, auto, center);
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  .synap-context {
+    height: calc(110vh - 70px);
+    width: 464px;
+    box-sizing: border-box;
+    background-image: url("/icons/synap-bg.png");
+    background-size: cover;
+    @include flex(column, flex-start, center);
+    color: $white-font-color;
+    padding-top: 3em;
+
+    .synap-icon {
+      width: 5.4em;
+      height: 5.4em;
+    }
+
+    .synap-content-text {
+      font-size: 0.8em;
+      font-weight: 300;
+      line-height: 25px;
+      text-align: justify;
+      padding-left: 20%;
+      padding-right: 20%;
+      margin-top: 3em;
+    }
+
+    .synap-content-title {
+      font-weight: 600;
+      font-size: 1.6em;
+      line-height: 100px;
+      margin: 0px;
+    }
+  }
+
+  .synap-form {
+    @include flex(row, center, center);
+    flex: 1;
+  }
+
+  .login-form,
+  .register-form {
+    @include flex(column, flex-start, center);
+    width: 500px;
+    height: 500px;
+    margin: 0px;
+    box-sizing: border-box;
+
+    .form-header-text {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0px;
+    }
+
+    .s-header-text {
+      font-size: 0.9em;
+      color: $outline-color-1;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    .row-form {
+      @include flex(row, space-between);
+      width: 362px;
+      padding-bottom: 15px;
+    }
+
+    .user-info-container {
+      width: 362px;
+      p {
+        color: $outline-color-1;
+        font-size: 0.9em;
+        margin: 0px;
+        margin-top: 10px;
+      }
+
+      .error-container {
+        @include flex(row, left, center);
+        position: absolute;
+        margin-top: 5px;
+      }
+
+      .error-message {
+        color: $primary-theme-color;
+      }
+
+      .date-error {
+        fieldset {
+          border-color: $primary-theme-color;
+        }
+      }
+
+      input {
+        width: 100%;
+      }
+
+      .standard-password-adorment {
+        width: 100%;
+        padding-left: 5px;
+        font-size: 0.9em;
+        input::-ms-reveal,
+        input::-ms-clear {
+          display: none;
+        }
+      }
+
+      svg {
+        width: 20px;
+      }
+
+      .field-input {
+        width: 100%;
+
+        input {
+          padding-left: 5px;
+          font-size: 0.9em;
+        }
+      }
+
+      .general-input-error-text {
+        margin: 0px;
+        color: $primary-theme-color;
+        font-size: 0.8em;
+      }
+    }
+
+    .remember-me {
+      @include flex(row);
+      p {
+        color: $outline-color-1;
+        font-size: 0.9em;
+      }
+    }
+    .forgot-password-text {
+      color: $primary-theme-color;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    .action-button {
+      width: 362px;
+      height: 36px;
+      background-color: $primary-theme-color;
+      color: $white-font-color;
+      font-size: 0.9em;
+      text-transform: none;
+    }
+
+    .auth-option {
+      color: $outline-color-2;
+      font-size: 0.9em;
+    }
+
+    .identity-provider-icons {
+      @include flex(row, space-between, center);
+      width: 80px;
+
+      .facebook-icon,
+      .google-icon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .alt-switch {
+      font-size: 0.9em;
+      .click-here-signup {
+        text-decoration: none;
+        color: $primary-theme-color;
+      }
+    }
+  }
+
+  .register-form {
+    width: 600px;
+
+    .row-form {
+      width: 440px;
+      column-gap: 30px;
+
+      .field-input {
+        width: 100%;
+      }
+      .select-input {
+        width: 100%;
+        div {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .row-form-2 {
+      width: 440px;
+      @include flex(row);
+      column-gap: 30px;
+
+      div {
+        input {
+          height: 28px;
+          padding: 3px 3px 3px 10px;
+          font-size: 0.9em;
+        }
+
+        svg {
+          width: 20px;
+        }
+      }
+    }
+
+    .action-button {
+      width: 390px;
+    }
+
+    .user-info-container {
+      width: 100%;
+      input {
+        padding: 5px 5px 5px 0px;
+        width: 100%;
+      }
+
+      .error-outline {
+      
+          &::before {
+            border-bottom: 1px solid red;
+          }
+        
+      }
+
+      .select-input {
+        width: 100%;
+      }
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+    }
+
+    .general-error{
+      font-size: 0.9em;
+      color: $primary-theme-color;
+      text-align: left;
+      margin: 0px;
+      width: 440px;
+      margin-top: 7px;
+    }
+  }
+}

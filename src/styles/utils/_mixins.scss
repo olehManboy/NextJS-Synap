@@ -1,0 +1,14 @@
+@mixin flex($flex-direction,$center-x-axis:center,$center-y-axis:center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $center-x-axis;
+  align-items: $center-y-axis;
+}
+
+// @mixin responsive() {
+//   @media (max-width: 1000px){
+//      @content 
+//   }
+  
+// }
+
